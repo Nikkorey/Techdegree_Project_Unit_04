@@ -1,0 +1,28 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: $br;
+
+  &:hover {
+    background: lighten($turquoise, 1%);
+    cursor: pointer;
+  }
+
+  @media #{$brk-point} {
+    padding: 10px 30px;
+  }
+}
+
+@each $name, $color in $button-colors {
+  .#{$name} {
+    background-color: $color;
+  }
+}
