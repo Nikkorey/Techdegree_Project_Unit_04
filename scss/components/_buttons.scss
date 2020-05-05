@@ -10,19 +10,16 @@
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: $br;
-
-  &:hover {
-    background: lighten($turquoise, 1%);
-    cursor: pointer;
+  @each $key, $color in $button-colors {
+    &.#{$key} {
+      background-color: $color;
+      &:hover {
+        background-color: lighten($color, 10%);
+        cursor: pointer;
+      }
+    }
   }
-
   @media #{$brk-point} {
     padding: 10px 30px;
-  }
-}
-
-@each $name, $color in $button-colors {
-  .#{$name} {
-    background-color: $color;
   }
 }

@@ -46,3 +46,11 @@
 .card {
   flex-basis: 100%;
 }
+
+@media #{$brk-point} {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      flex-basis: nth($flex, $i);
+    }
+  }
+}
